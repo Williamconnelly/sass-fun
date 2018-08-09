@@ -1,0 +1,90 @@
+// Variable
+$main-color: #a77;
+$font-stack: Helvetica, sans-serif;
+$green: #0F0;
+$red: #f00;
+$small-width: 400px;
+$medium-width: 960px;
+
+@mixin boldColor($color) {
+  font-weight: bold;
+  color: $color;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+    -ms-transform: $property;
+      -moz-transform: $property;
+        transform: $property;
+}
+
+p {
+  color: $main-color;
+  font: $font-stack;
+}
+
+h2 {
+  @include boldColor("blue");
+}
+
+h1 {
+  color: $main-color;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// Nesting
+.divclass {
+  @import "header";
+  p {
+    width: 100%;
+    span {
+      color: black;
+      @include transform(rotate(30deg));
+    }
+  }
+}
+
+// -Inheritance-
+// Placeholder class
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%message-shared {
+  border: 1px solid black;
+  padding: 10px;
+  color: #333;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.container {
+  width: 100%;
+}
+
+.article {
+  float: left;
+  width: 600px / $medium-width * 100%;
+}
+
+.aside {
+  float: right;
+  width: 300px / $medium-width * 100%;
+}

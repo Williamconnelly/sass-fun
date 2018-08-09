@@ -1,0 +1,62 @@
+p {
+  color: #a77;
+  font: Helvetica, sans-serif;
+}
+
+h2 {
+  font-weight: bold;
+  color: "blue";
+}
+
+h1 {
+  color: #a77;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.divclass ul {
+  display: inline;
+}
+.divclass p {
+  width: 100%;
+}
+.divclass p span {
+  color: black;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.error, .success, .message {
+  border: 1px solid black;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.container {
+  width: 100%;
+}
+
+.article {
+  float: left;
+  width: 6.25%;
+}
+
+.aside {
+  float: right;
+  width: 31.25%;
+}
+
+/*# sourceMappingURL=output.css.map */
